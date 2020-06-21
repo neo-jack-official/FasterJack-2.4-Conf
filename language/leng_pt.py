@@ -56,6 +56,7 @@ ejemplo_leng = "exemplo"
 estado_leng = "Estado"
 error500_leng = "Error 500! Servidor"
 #F:
+forzar_identidad = "Forçando nova identidade..."
 #G:
 #H:
 host_cerrado_leng = "Host inexistente ou porta fechada"
@@ -80,6 +81,7 @@ nota_leng = "NOTA"
 obligatorio_leng2 = "REQUERIDOS"
 no_tor_instalado_leng = "Você não possui um servidor TOR instalado (Tor Expert Bundle)"
 nuevo_agente_leng = "Novo Agente Designado"
+nueva_ip_asignada = "Nova identidade atribuída..."
 #O:
 o_leng = "ou" #ingles: or
 opciones_leng = "Opções"
@@ -122,7 +124,7 @@ verifique_leng = "Verifique a WEB ou IP"
 #W:
 web_ip = "Web ou IP para usar!!!"
 web_invalido_leng = "Web ou IP inválido, tente novamente"
-window = "Python3 versão"
+window = "Windows versão 64-Bite"
 #X:
 #Y:
 #Z:
