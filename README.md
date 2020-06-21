@@ -1,5 +1,5 @@
-# FasterJack-2.2-Conf
-New Version of FasterJack 2.2 configurable
+# FasterJack-2.3-Conf
+New Version of FasterJack 2.3 configurable
 
  FasterJack for Python 3 (fasterjack.py)
 # It is a Denial Tool for Web-Servers by Neo-Jack JUN / 2020
