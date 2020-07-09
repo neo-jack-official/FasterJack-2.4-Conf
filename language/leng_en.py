@@ -3,9 +3,6 @@
 #By Neo-Jack
 
 #The source file "leng_default.py", has to keep the same name.
-#To change the language, rename the language file to "leng_default.py"
-#Ex. "leng_es.py"
-#Rename it to "leng_default.py"
 
 #Instructions:
 #Consider when editing manually. In the first 10 lines.
@@ -37,6 +34,7 @@ activado_leng = "Activated"
 adios_leng = "Too many attempts. BYE"
 asignando_nuevo_leng = "Assigning new agent to client"
 #B:
+basic_txt = "Basic"
 bots_verificadores_leng = "BOTS Verifiers"
 #C:
 cli_txt = "Number of Clients to use?"
@@ -57,11 +55,11 @@ estado_leng = "Status"
 error500_leng = "Server Error 500!"
 #F:
 forzar_identidad = "Forcing New Identity..."
+forzando_leng = "FORCING"
 #G:
 #H:
 host_cerrado_leng = "Non-existent Host or Closed Port"
 #I:
-info_leng = "INFO"
 inexistente_leng = "Non-existent Web or IP"
 intentalo_leng = "Try again"
 iniciando_leng = "Starting"
@@ -72,12 +70,13 @@ imp_hand_leng = "Impossible handshake with the server"
 #J:
 #K:
 #L:
+loading_leng = "Loading"
 #M:
+malicious_package = "Malicious Package"
 me_txt = "Selecting Method to use"
 metodos2_leng = "Methods"
 metodo2_leng = "Method"
 #N:
-nota_leng = "NOTE"
 obligatorio_leng2 = "REQUIRED"
 no_tor_instalado_leng = "You do not have TOR Server Installed (Tor Expert Bundle)"
 nuevo_agente_leng = "New Assigned Agent"
@@ -87,7 +86,10 @@ o_leng = "or" #ingles: or
 opciones_leng = "Options"
 #P:
 puerto_a_usar_leng = "Port to use"
-paquete_enviado_leng = "Package sent"
+paquete_enviado_leng = "Package Sent"
+paquete_recepcionado_leng = "Package Received"
+paquete_timeout_leng = "Package TimeOut"
+paquete_bloqueado_leng = "Locked Package"
 paquete_no_enviado = "Package NOT Delivered"
 para_terminar_leng = "To finish"
 puerto2_leng = "Port"
@@ -104,6 +106,7 @@ respuesta_valida_leng = "Valid answers"
 recomendado_leng = "Recommended"
 reconectando_leng = "Re-Connecting Client to"
 #S:
+strong_txt = "Strong"
 seleccione_metodo_leng = "Select the Method No.?"
 seguridad_ip_leng = "IP security"
 servidor_ip_leng = "IP-Checker server"
@@ -124,7 +127,7 @@ verifique_leng = "Check the WEB or IP"
 #W:
 web_ip = "Web or IP to use!!!"
 web_invalido_leng = "Invalid web or IP, Retry"
-window = "Windows version 64-Bite"
+window = "Version for Python 3"
 #X:
 #Y:
 #Z:
