@@ -2,7 +2,7 @@
 New Version of FasterJack 2.4 configurable
 
  FasterJack for Python 3 (fasterjack.py)
-# It is a Denial Tool for Web-Servers by Neo-Jack JUN / 2020
+# It is a Denial Tool for Web-Servers by Neo-Jack
 
 ## News
 
