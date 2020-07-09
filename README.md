@@ -1,22 +1,35 @@
 # FasterJack-2.3-Conf
-New Version of FasterJack 2.3 configurable
+New Version of FasterJack 2.4 configurable
 
  FasterJack for Python 3 (fasterjack.py)
 # It is a Denial Tool for Web-Servers by Neo-Jack JUN / 2020
 
 ## News
 
-version 2.2
-It incorporates:
-1) New codeless working method like Windows version (Start with: python3 fasterjack.py)
-2) New display
-3) Configurable menu (config.py)
-4) Multilanguage (English, Spanish, Portuges)
-5) Library Installer and Verifier
-6) Tor service verifier and installer (Tor Expert Bundle for LINUX)
-7) Improved compatibility with Windows and Linux: Debian, Ubuntu, Fedora, openSUSE.
-8) External library to edit language at ease "language / leng_default.py"
-9) Direct association of ports to HTTP or HTTPS
+Version 2.4 JUL 2020
+
+📌 Package: REFERENCE automatically associated to a random list of sites.
+📌 Package: Random KeepAlive, Timeout and Max
+📌 Package: Extra Malicioasa Data
+📌 3 ways of malicious packet methods
+📌 Confirmation of package reception, blocking or TimeOut
+📌 Notification in Bytes of Package Size
+📌 Force new agent if the package is blocked and reconnect if necessary.
+📌 Performance improvement, less notifications
+📌 Real True Random methods
+📌 New configurations in config.py
+
+version 2.2 JUN 2020
+Incorporates:
+📌 New codeless working method like Windows version (Start with: python3 fasterjack.py)
+📌 New display
+📌 Configurable menu (config.py)
+📌 Multilanguage (English, Spanish, Portuges)
+📌 Library Installer and Verifier
+📌 Tor service verifier and installer (Tor Expert Bundle for LINUX)
+📌 Improved compatibility with Windows and Linux: Debian, Ubuntu, Fedora, openSUSE.
+📌 External library to edit language at ease "language / leng_default.py"
+📌 Direct association of ports to HTTP or HTTPS
 
 ## What is FasterJack?
 
