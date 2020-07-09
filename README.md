@@ -8,7 +8,7 @@ New Version of FasterJack 2.4 configurable
 
 Version 2.4 JUL 2020
 
-📌 Package: REFERENCE automatically associated to a random list of sites.\n
+📌 Package: REFERENCE automatically associated to a random list of sites.
 📌 Package: Random KeepAlive, Timeout and Max
 📌 Package: Extra Malicioasa Data
 📌 3 ways of malicious packet methods
@@ -19,7 +19,7 @@ Version 2.4 JUL 2020
 📌 Real True Random methods
 📌 New configurations in config.py
 
-version 2.2 JUN 2020\n
+version 2.2 JUN 2020
 
 📌 New codeless working method like Windows version (Start with: python3 fasterjack.py)
 📌 New display
