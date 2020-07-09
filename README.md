@@ -9,27 +9,46 @@ New Version of FasterJack 2.4 configurable
 Version 2.4 JUL 2020
 
 📌 Package: REFERENCE automatically associated to a random list of sites.
-📌 Package: Random KeepAlive, Timeout and Max
-📌 Package: Extra Malicioasa Data
+
+📌 Package: Random KeepAlive, Timeout and Max.
+
+📌 Package: Extra Malicioasa Data.
+
 📌 3 ways of malicious packet methods
-📌 Confirmation of package reception, blocking or TimeOut
-📌 Notification in Bytes of Package Size
+
+📌 Confirmation of package reception, blocking or TimeOut.
+
+📌 Notification in Bytes of Package Size.
+
 📌 Force new agent if the package is blocked and reconnect if necessary.
-📌 Performance improvement, less notifications
-📌 Real True Random methods
-📌 New configurations in config.py
+
+📌 Performance improvement, less notifications.
+
+📌 Real True Random methods.
+
+📌 New configurations in config.py .
+
 
 version 2.2 JUN 2020
 
 📌 New codeless working method like Windows version (Start with: python3 fasterjack.py)
+
 📌 New display
+
 📌 Configurable menu (config.py)
+
 📌 Multilanguage (English, Spanish, Portuges)
+
 📌 Library Installer and Verifier
+
 📌 Tor service verifier and installer (Tor Expert Bundle for LINUX)
+
 📌 Improved compatibility with Windows and Linux: Debian, Ubuntu, Fedora, openSUSE.
+
 📌 External library to edit language at ease "language / leng_default.py"
+
 📌 Direct association of ports to HTTP or HTTPS
+
 
 ## What is FasterJack?
 
