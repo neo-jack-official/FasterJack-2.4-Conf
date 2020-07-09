@@ -10,12 +10,25 @@
 language_conf = "en"        #Select Language: Options --> [default], [es], [en], [pt]
 check_pip_config = "no"     #Check PIP to Install?: Options --> [yes] or [no]. only activate under Python 3
 check_libraries_conf = "yes" #Check libraries at Startup?: Options --> [yes] or [no]. only activate under python 3
-check_tor_conf = "no"       #Check Tor Expert Bundle to Install?: Options --> [yes] or [no]. only activate under LINUX
+check_tor_conf = "yes"      #Check Tor Expert Bundle to Install?: Options --> [yes] or [no]. only activate under LINUX
 #Default variables
-port_conf = "80"            #Select default Port: Options --> [80] or [443]
-clientes_conf = "60"        #Select default number of customers, recommended between [30 - 115]
+port_conf = "443"            #Select default Port: Options --> [80] or [443]
+clientes_conf = "70"        #Select default number of customers, recommended between [30 - 135]
 Tor_conf = "off"            #Select default Tor-Network: Options --> [on] or [off]
-#
+
+#Malicious Package
+package_conf = "normal"    #Malicious package, directly influences your internet consumption : Options --> [basic] or [normal] or [strong]
+
+#Extra Notifications        (Off mode make work faster the Ddos)
+conectando_conf = "off"     #Select if you want to see connected notification: Options --> [on] or [off]
+reconectando_conf = "off"   #Select if you want to see re-connected notification: Options --> [on] or [off]
+asignando_nuevo_conf = "off" #Select if you want to see notification of Assigning new Agent: Options --> [on] or [off]
+agente_asignado_conf = "off" #Select if you want to see notification of Assigned Agent: Options --> [on] or [off]
+forzar_agente_conf = "off"   #Select if you want to see notification of Force new Agent: Options --> [on] or [off]
+package_send_it_conf = "off" #Select if you want to see package delivery notification: Options --> [on] or [off]
+nueva_ip_asignada = "off"    #select if you want to see notification of new assigned ip: Options --> [on] or [off]
+verif_host_conf = "off"      #select if you want to see host verification notification x each client: Options --> [on] or [off]
+
 ##From now on, Do not touch, if you do not know what you are doing.
 # --- Ip-Checker ---
 ipcheck_url1_conf = 'http://icanhazip.com'   # Service Ip-Checker 01 --> Do not modify, unless they fail.
