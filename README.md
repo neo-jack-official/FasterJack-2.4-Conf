@@ -1,4 +1,4 @@
-# FasterJack-2.3-Conf
+# FasterJack 2.4 Conf
 New Version of FasterJack 2.4 configurable
 
  FasterJack for Python 3 (fasterjack.py)
