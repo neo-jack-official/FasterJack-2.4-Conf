@@ -3,9 +3,6 @@
 #By Neo-Jack
 
 #El archivo fuente "leng_default.py", debe mantener el mismo nombre.
-#Para cambiar el idioma, cambie el nombre del archivo de idioma a "leng_default.py"
-#Ej. "leng_es.py"
-#Renombrarlo a "leng_default.py"
 
 #Instrucciones:
 #Considere al editar manualmente. En las primeras 10 líneas.
@@ -37,6 +34,7 @@ activado_leng = "Activado"
 adios_leng = "Demasiados intentos. ADIOS"
 asignando_nuevo_leng = "Asignando nuevo agente a cliente"
 #B:
+basic_txt = "Basico"
 bots_verificadores_leng = "BOTS Verificadores"
 #C:
 cli_txt = "Cantidad de Clientes a usar?"
@@ -57,11 +55,11 @@ estado_leng = "Estado"
 error500_leng = "Error 500! Servidor"
 #F:
 forzar_identidad = "Forzando Nueva Identidad..."
+forzando_leng = "FORZANDO"
 #G:
 #H:
 host_cerrado_leng = "Host Inexistente o Puerto Cerrado"
 #I:
-info_leng = "INFO"
 inexistente_leng = "Inexistente Web o IP"
 intentalo_leng = "Intentelo otra vez"
 iniciando_leng = "Iniciando"
@@ -72,12 +70,13 @@ imp_hand_leng = "Imposible handshake con el Servidor"
 #J:
 #K:
 #L:
+loading_leng = "Cargando"
 #M:
+malicious_package = "Paquete Malicioso"
 me_txt = "Seleccionando Metodo a usar"
 metodos2_leng = "Metodos"
 metodo2_leng = "Metodo"
 #N:
-nota_leng = "NOTA"
 obligatorio_leng2 = "OBLIGATORIO"
 no_tor_instalado_leng = "Usted no tine Servidor TOR Instalado (Tor Expert Bundle)"
 nuevo_agente_leng = "Nuevo Agente Asignado"
@@ -88,6 +87,9 @@ opciones_leng = "Opciones"
 #P:
 puerto_a_usar_leng = "Puerto a usar"
 paquete_enviado_leng = "Paquete Enviado"
+paquete_recepcionado_leng = "Paquete Recepcionado"
+paquete_timeout_leng = "Paquete TimeOut"
+paquete_bloqueado_leng = "Paquete Bloqueado"
 paquete_no_enviado = "Paquete NO Entregado"
 para_terminar_leng = "Para Terminar"
 puerto2_leng = "Puerto"
@@ -104,6 +106,7 @@ respuesta_valida_leng = "Respuestas validas"
 recomendado_leng = "Recomendados"
 reconectando_leng = "Re-Conectando Cliente a"
 #S:
+strong_txt = "Fuerte"
 seleccione_metodo_leng = "Seleccione el Nº del Metodo?"
 seguridad_ip_leng = "Seguridad de IP"
 servidor_ip_leng = "Servidor IP-Checker"
@@ -124,7 +127,7 @@ verifique_leng = "Verifique la WEB o el IP"
 #W:
 web_ip = "Web o Ip a usar!!!"
 web_invalido_leng = "Web o IP invalido, Reintente"
-window = "Version para Windows 64-Bite"
+window = "Version para Python 3"
 #X:
 #Y:
 #Z:
