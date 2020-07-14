@@ -8,6 +8,8 @@ New Version of FasterJack 2.4 configurable
 
 Version 2.4 JUL 2020
 
+📌 Security Update
+
 📌 Package: REFERENCE automatically associated to a random list of sites.
 
 📌 Package: Random KeepAlive, Timeout and Max.
