@@ -17,7 +17,7 @@ clientes_conf = "135"        #Select default number of customers, recommended be
 Tor_conf = "on"            #Select default Tor-Network: Options --> [on] or [off]
 
 #Malicious Package
-package_conf = "basic"    #Malicious package, directly influences your internet consumption : Options --> [basic] or [normal] or [strong]
+package_conf = "normal"    #Malicious package, directly influences your internet consumption : Options --> [basic] or [normal] or [strong]
 
 #Extra Notifications        (Off mode make work faster the Ddos)
 conectando_conf = "off"     #Select if you want to see connected notification: Options --> [on] or [off]
