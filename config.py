@@ -26,7 +26,7 @@ asignando_nuevo_conf = "off" #Select if you want to see notification of Assignin
 agente_asignado_conf = "off" #Select if you want to see notification of Assigned Agent: Options --> [on] or [off]
 forzar_agente_conf = "off"   #Select if you want to see notification of Force new Agent: Options --> [on] or [off]
 package_send_it_conf = "off" #Select if you want to see package delivery notification: Options --> [on] or [off]
-nueva_ip_asignada = "off"    #select if you want to see notification of new assigned ip: Options --> [on] or [off]
+nueva_ip_asignada_conf = "off"    #select if you want to see notification of new assigned ip: Options --> [on] or [off]
 verif_host_conf = "off"      #select if you want to see host verification notification x each client: Options --> [on] or [off]
 
 ##From now on, Do not touch, if you do not know what you are doing.
