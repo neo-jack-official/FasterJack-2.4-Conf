@@ -841,7 +841,7 @@ def down_it(item):
         time.sleep(1)        
         print(tt + "[" + SR + ss + "+" + SR + tt + "]" + SR + " " + hh + forzar_identidad)        
         conec_tor()
-        if nueva_ip_asignada_conf == "on" or nueva_ip_asignada_conf == "ON" or nueva_ip_asignada_conf == "On":
+        if nueva_ip_asignada == "on" or nueva_ip_asignada == "ON" or nueva_ip_asignada == "On":
             print (tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + nueva_ip_asignada)        
         time.sleep(1)    
     except socket.error as e:
@@ -849,7 +849,7 @@ def down_it(item):
         print(tt + "[" + SR + ss + "+" + SR + tt + "]" + SR + " " + hh + " " + para_terminar_leng + " " + nn + "[Ctrl + C] " + hh + o_leng + nn + " [Ctrl + Z]" + SR)        
         print(tt + "[" + SR + ss + "+" + SR + tt + "]" + SR + " " + hh + forzar_identidad)        
         conec_tor()
-        if nueva_ip_asignada_conf == "on" or nueva_ip_asignada_conf == "ON" or nueva_ip_asignada_conf == "On":
+        if nueva_ip_asignada == "on" or nueva_ip_asignada == "ON" or nueva_ip_asignada_ == "On":
             print (tt + "[" + SR + gg + "!" + SR + tt + "]" + SR + " " + hh + nueva_ip_asignada)        
         time.sleep(1)  
 
